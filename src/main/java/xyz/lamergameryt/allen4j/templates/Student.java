@@ -1,4 +1,4 @@
-package xyz.lamergameryt.allen4j;
+package xyz.lamergameryt.allen4j.templates;
 
 import org.json.JSONObject;
 
@@ -7,10 +7,10 @@ import org.json.JSONObject;
  */
 public class Student {
     private final String fullName, courseName, formNumber, pic;
-    private final int batchId, userType;
+    private final int batchId, userType, userId;
 
     /**
-     * The constructor for the Student class. The constructor is private as a custom student cannot be created.
+     * The constructor for the Student class. The constructor is private as a custom student cannot be created directly.
      *
      * @param fullName The full name of the student.
      * @param courseName The name of the course the student is enrolled in.
@@ -19,25 +19,26 @@ public class Student {
      * @param batchId The batch id of the student.
      * @param userType The integer value of the user type.
      */
-    private Student(String fullName, String courseName, String formNumber, String pic, int batchId, int userType) {
+    private Student(String fullName, String courseName, String formNumber, String pic, int batchId, int userType, int userId) {
         this.fullName = fullName;
         this.courseName = courseName;
         this.formNumber = formNumber;
         this.pic = pic;
         this.batchId = batchId;
         this.userType = userType;
+        this.userId = userId;
     }
 
     /**
      * Get an instance of the Student class.
      *
      * @param json The JSONObject containing the data of the student.
-     * @return A instance of the `Student` class.
+     * @return A instance of the Student class.
      */
     public static Student getFromJSONObject(JSONObject json) {
         return new Student(json.getString("fullname").trim(), json.getString("courseName"),
                 json.getString("email"), json.getString("pic"), json.getInt("batchId"),
-                json.getInt("userType"));
+                json.getInt("userType"), json.getInt("userId"));
     }
 
     /**
@@ -85,5 +86,9 @@ public class Student {
 
     public int getUserType() {
         return userType;
+    }
+
+    public int getUserId() {
+        return userId;
     }
 }

@@ -1,11 +1,11 @@
 package xyz.lamergameryt.allen4j.profile;
 
 import org.json.JSONObject;
-import xyz.lamergameryt.allen4j.Student;
+import xyz.lamergameryt.allen4j.templates.Student;
 
 public class SelfProfileResponse {
     /**
-     * The profile information of the user wrapped in the {@link xyz.lamergameryt.allen4j.Student} class.
+     * The profile information of the user wrapped in the {@link Student} class.
      */
     private final Student profile;
 

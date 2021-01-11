@@ -3,6 +3,7 @@ package xyz.lamergameryt.allen4j;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.utils.URIBuilder;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -34,15 +35,24 @@ public class Utils {
      * Read the response received from the API and converts it into a JSONObject object.
      *
      * @param entity The response received from the API.
-     * @return The JSONObject contains the parsed json text.
+     * @param type The type of response which will be received from the server.
+     * @return An object contains the parsed json text.
      * @throws IOException The connection could not be established.
      */
-    public static JSONObject getJSONFromEntity(HttpEntity entity) throws IOException {
+    public static Object getJSONFromEntity(HttpEntity entity, Class<?> type) throws IOException {
         Scanner sc = new Scanner(entity.getContent());
         StringBuilder json = new StringBuilder();
         while (sc.hasNextLine()) {
             json.append(sc.nextLine());
         }
-        return new JSONObject(json.toString());
+
+        if (type == JSONObject.class) {
+            return new JSONObject(json.toString());
+        } else if (type == JSONArray.class) {
+            return new JSONArray(json.toString());
+        } else {
+            return null;
+        }
     }
 }
+

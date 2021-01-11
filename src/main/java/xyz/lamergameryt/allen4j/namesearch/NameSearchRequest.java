@@ -1,7 +1,7 @@
 package xyz.lamergameryt.allen4j.namesearch;
 
 import xyz.lamergameryt.allen4j.APIEndpoint;
-import xyz.lamergameryt.allen4j.Request;
+import xyz.lamergameryt.allen4j.templates.Request;
 
 /**
  * The NameSearchRequest class is used to perform a request that searches for a student based on his name.
