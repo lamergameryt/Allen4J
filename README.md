@@ -13,7 +13,7 @@ In this example for v1.0.1, we will get a users form number from his name.
 
 ```java
 public final class ExampleSearch {
-    public static void main(final String[] args) {
+    public static void main(final String[] args) throws IOException, URISyntaxException {
         final String baseURL = args[0];
         final String authorization = args[1];
         final String name = args[2];
