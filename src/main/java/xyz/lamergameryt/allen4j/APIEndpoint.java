@@ -6,7 +6,8 @@ package xyz.lamergameryt.allen4j;
 public enum APIEndpoint {
     STUDENT_PROFILE("/user/profile/%s"),
     SELF_PROFILE("/user/profile/"),
-    SEARCH("/globalsearch/2");
+    SEARCH("/globalsearch/2"),
+    SELF_SCHEDULE("/user/schedule");
 
     /**
      * Holds the value of the endpoint.

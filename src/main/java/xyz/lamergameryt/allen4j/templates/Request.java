@@ -1,4 +1,6 @@
-package xyz.lamergameryt.allen4j;
+package xyz.lamergameryt.allen4j.templates;
+
+import xyz.lamergameryt.allen4j.APIEndpoint;
 
 import java.util.HashMap;
 

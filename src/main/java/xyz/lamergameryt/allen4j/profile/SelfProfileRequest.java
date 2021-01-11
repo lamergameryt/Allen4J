@@ -1,7 +1,7 @@
 package xyz.lamergameryt.allen4j.profile;
 
 import xyz.lamergameryt.allen4j.APIEndpoint;
-import xyz.lamergameryt.allen4j.Request;
+import xyz.lamergameryt.allen4j.templates.Request;
 
 public class SelfProfileRequest extends Request {
     /**

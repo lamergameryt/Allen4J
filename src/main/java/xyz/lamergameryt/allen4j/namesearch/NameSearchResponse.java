@@ -2,7 +2,7 @@ package xyz.lamergameryt.allen4j.namesearch;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import xyz.lamergameryt.allen4j.Student;
+import xyz.lamergameryt.allen4j.templates.Student;
 
 import java.util.ArrayList;
 import java.util.List;
