@@ -61,12 +61,11 @@ public class AllenAPI {
         }
     }
 
-
     /**
      * Get the user's self profile
      *
-     * @param request The request used to get your own profile. Created by {@link SelfProfileRequest#build()} function.
-     * @return Instance of {@link SelfProfileResponse}
+     * @param request The request used to get your own profile. Created by {@link xyz.lamergameryt.allen4j.profile.SelfProfileRequest#build()} function.
+     * @return Instance of {@link xyz.lamergameryt.allen4j.profile.SelfProfileResponse}
      * @throws IOException The connection could not be established.
      * @throws URISyntaxException This will most likely be thrown when the baseURL is invalid.
      */
@@ -78,8 +77,8 @@ public class AllenAPI {
 
     /**
      * Get the user's upcoming lectures
-     * @param request The request used to get the upcoming lectures. Created by {@link SelfScheduleRequest#build(LocalDateTime)} function.}
-     * @return Instance of {@link SelfScheduleResponse}
+     * @param request The request used to get the upcoming lectures. Created by {@link xyz.lamergameryt.allen4j.schedule.SelfScheduleRequest#build(LocalDateTime)} function.}
+     * @return Instance of {@link xyz.lamergameryt.allen4j.schedule.SelfScheduleResponse}
      * @throws URISyntaxException The connection could not be established.
      * @throws IOException This will most likely be thrown when the baseURL is invalid.
      */
